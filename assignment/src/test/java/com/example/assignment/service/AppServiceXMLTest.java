@@ -21,8 +21,6 @@ class AppServiceXMLTest {
     @InjectMocks
     private AppServiceXML appServiceXML;
 
-
-
     RestTemplate restTemplateMock = Mockito.mock(RestTemplate.class);
 
     private final String url = "http://www.dneonline.com/calculator.asmx";
