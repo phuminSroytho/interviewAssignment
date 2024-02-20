@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+<h1>Form Example</h1>
+<form id="myForm" action="/submit" method="post">
+    <label for="text1">First name:</label>
+    <input type="text" id="text1" name="text1"><br><br>
+
+    <label for="text2">Last name:</label>
+    <input type="text" id="text2" name="text2"><br><br>
+
+    <input type="submit" value="Submit" onclick="submitForm(event)">
+</form>
+
+<script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = document.getElementById("myForm");
+            var formData = new FormData(form);
+
+            // Construct a URL with query parameters containing the form data
+            var url = "/success?" + new URLSearchParams(formData).toString();
+
+            // Redirect to success.html with the constructed URL
+            window.location.href = url;
+        }
+
+</script>
+</body>
+</html>

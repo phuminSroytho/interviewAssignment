@@ -32,6 +32,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.ebean</groupId>
+			<artifactId>ebean-h2</artifactId>
+			<version>13.20.1-jakarta</version>
+		</dependency>
 	</dependencies>
 
 	<build>
