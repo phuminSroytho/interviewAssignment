@@ -23,7 +23,7 @@ public class AppServiceXML {
     private final RestTemplate restTemplate = new RestTemplate();
 
     @SneakyThrows
-    public Integer getCalculateByAction(SymbolConstant action,Integer intA,Integer intB){
+    public Integer getCalculateByAction(SymbolConstant action, Integer intA, Integer intB) {
         UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(calculatorUrl);
         HttpHeaders newHttpHeader = new HttpHeaders();
         newHttpHeader.setContentType(MediaType.valueOf(APPLICATION_CONTENT_TYPE_SOAP_XML));
@@ -39,7 +39,7 @@ public class AppServiceXML {
                 String.class);
 
         if (Objects.isNull(soapResponse)) {
-            log.error("Got empty result when calling {} with {}", calculatorUrl,action.getRequest());
+            log.error("Got empty result when calling {} with {}", calculatorUrl, action.getRequest());
             throw new Exception();
         }
         return Integer.valueOf(Objects.requireNonNull(Util.getResponseSoapXML(soapResponse, action.getResponse())));
