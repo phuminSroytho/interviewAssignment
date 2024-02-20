@@ -29,4 +29,5 @@ public class WelcomeController {
         log.info(model.toString());
         return "success.html";
     }
+
 }
