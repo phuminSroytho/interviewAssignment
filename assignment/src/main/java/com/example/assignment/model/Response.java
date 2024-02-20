@@ -6,5 +6,5 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class Response {
-    public Integer result;
+    private Integer result;
 }
