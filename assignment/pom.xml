@@ -33,9 +33,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>io.ebean</groupId>
-			<artifactId>ebean-h2</artifactId>
-			<version>13.20.1-jakarta</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
 

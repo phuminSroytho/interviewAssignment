@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+
+<body>
+<h1>Form Example</h1>
+<form id="myForm" action="#" th:action="@{/submit}" th:object="${request}" method="post">
+    <label for="firstName">First name:</label>
+    <input type="text" th:field="*{firstName}"><br><br>
+
+    <label for="lastName">Last name:</label>
+    <input type="text" th:field="*{lastName}"><br><br>
+
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+
+</html>

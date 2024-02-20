@@ -6,8 +6,8 @@
     <title>Success Page</title>
 </head>
 <body>
-<h1>Success Page</h1>
-<p>Parameter 1: <span th:text="${text1}"></span></p>
-<p>Parameter 2: <span th:text="${text2}"></span></p>
+<h1>Submitted Form Data</h1>
+<h2>Your input was received as:</h2>
+<p><span th:text="'fname=' + ${request.firstName} + '&lname=' + ${request.lastName}"></span></p>
 </body>
 </html>
